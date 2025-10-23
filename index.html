@@ -18,6 +18,9 @@
             /* Application de styles généraux pour les entrées du glossaire */
             @apply p-4 border rounded-xl shadow-sm transition duration-150;
         }
+        .role-card {
+            @apply p-3 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition duration-200;
+        }
     </style>
 </head>
 <body class="min-h-screen p-4 md:p-8">
@@ -48,20 +51,44 @@
                 </ul>
             </section>
 
+            <!-- Section RAPPEL : Méthode en Cascade -->
+            <section class="mb-8 p-6 bg-emerald-100 rounded-2xl border-l-4 border-emerald-500">
+                <h2 class="text-3xl font-bold text-emerald-700 mb-4 flex items-center">
+                    Rappel : Le V-Cycle et ses Acteurs (MOA, AMOA, MOE) 🔄
+                </h2>
+                <p class="mb-4 text-gray-700 text-sm">
+                    La Méthode en Cascade (V-Cycle) est un processus séquentiel : on avance étape par étape, sans retour arrière facile. Elle est le socle de la séparation des rôles :
+                </p>
+                <div class="space-y-3">
+                    <div class="role-card bg-emerald-50">
+                        <strong class="text-emerald-800">Côté MOA (Client) :</strong>
+                        <span class="text-sm text-gray-600 ml-2">Définit le **Besoin Métier** (Cadrage, Spécifications Fonctionnelles) et valide le produit (Recette).</span>
+                    </div>
+                    <div class="role-card bg-emerald-50">
+                        <strong class="text-emerald-800">Côté MOE (Réalisation) :</strong>
+                        <span class="text-sm text-gray-600 ml-2">Définit la **Solution Technique** (Conception Détaillée, Développement) et gère la Production.</span>
+                    </div>
+                    <div class="role-card bg-emerald-50">
+                        <strong class="text-emerald-800">Rôle Transverse (AMOA) :</strong>
+                        <span class="text-sm text-gray-600 ml-2">Assiste la MOA dans la formalisation des besoins et le pilotage.</span>
+                    </div>
+                </div>
+            </section>
+
             <!-- Section 1: Rappel & Complément : AMOA -->
             <section class="mb-8 p-6 bg-yellow-50 rounded-2xl border-l-4 border-yellow-500">
                 <h2 class="text-3xl font-bold text-yellow-800 mb-4 flex items-center">
-                    Rappel et Complément : L'AMOA 🤝
+                    Zoom sur l'AMOA (Assistance à Maîtrise d'Ouvrage) 🧭
                 </h2>
                 <div class="space-y-4 text-gray-700">
                     <div class="p-4 bg-yellow-100 rounded-lg border-l-4 border-yellow-400">
-                        <h3 class="text-xl font-semibold text-yellow-700 mb-2">Assistance à Maîtrise d'Ouvrage (AMOA) 🧭</h3>
+                        <h3 class="text-xl font-semibold text-yellow-700 mb-2">Rôle et Missions Principales</h3>
                         <p class="text-sm">
-                            L'AMOA est un rôle de **conseil** qui assiste la MOA (le client) dans les projets complexes. Son rôle est d'aider la MOA à :
+                            L'AMOA est un rôle de <b>conseil</b> qui assiste la MOA (le client) dans les projets complexes. Son rôle est d'aider la MOA à :
                             <ul class="list-disc pl-5 mt-2 text-xs">
-                                <li>**Traduire** clairement ses besoins métier en spécifications fonctionnelles compréhensibles par la MOE.</li>
-                                <li>**S'assurer** de la bonne cohérence entre la stratégie du client et la solution proposée.</li>
-                                <li>**Piloter** le projet aux côtés du Chef de Projet (PM) côté MOA.</li>
+                                <li><b>Traduire</b> clairement ses besoins métier en spécifications fonctionnelles compréhensibles par la MOE.</li>
+                                <li><b>S'assurer</b> de la bonne cohérence entre la stratégie du client et la solution proposée.</li>
+                                <li><b>Piloter</b> le projet aux côtés du Chef de Projet (PM) côté MOA.</li>
                             </ul>
                         </p>
                     </div>
@@ -74,26 +101,26 @@
                     Les Acteurs du Digital : Qui fait Quoi ? 🛠️
                 </h2>
                 <p class="mb-4 text-gray-700">
-                    Découvrons les rôles spécifiques qui interviennent dans le cycle de vie du projet.
+                    Découvrons les rôles spécifiques qui interviennent dans le cycle de vie du projet, regroupés par phases majeures.
                 </p>
 
                 <!-- Bloc 1: Phase de Conception / Cadrage (UX/Design/Stratégie) -->
                 <div class="mb-8 p-5 bg-white rounded-xl shadow-md border-l-4 border-pink-500">
                     <h3 class="text-2xl font-bold text-pink-600 mb-4">Phase A : Conception et Cadrage (Le Design & La Stratégie) 🎨</h3>
                     <div class="space-y-3">
-                        <div class="p-3 bg-pink-50 rounded-lg">
+                        <div class="role-card">
                             <strong class="text-pink-700">UX Designer (User Experience)</strong>
-                            <p class="text-sm text-gray-600">Conçoit l'expérience utilisateur, s'assure que le produit est facile et agréable à utiliser. Crée les **wireframes** (maquettes fonctionnelles).</p>
+                            <p class="text-sm text-gray-600">Conçoit l'expérience utilisateur, s'assure que le produit est facile et agréable à utiliser. Crée les <b>wireframes</b> (maquettes fonctionnelles).</p>
                         </div>
-                        <div class="p-3 bg-pink-50 rounded-lg">
+                        <div class="role-card">
                             <strong class="text-pink-700">Directeur Artistique (DA)</strong>
-                            <p class="text-sm text-gray-600">Définit l'identité visuelle, la charte graphique et l'interface utilisateur (**UI - User Interface**). Garant de l'esthétique du produit.</p>
+                            <p class="text-sm text-gray-600">Définit l'identité visuelle, la charte graphique et l'interface utilisateur (<b>UI - User Interface</b>). Garant de l'esthétique du produit.</p>
                         </div>
-                        <div class="p-3 bg-pink-50 rounded-lg">
+                        <div class="role-card">
                             <strong class="text-pink-700">Expert SEO / Rédacteur Web</strong>
-                            <p class="text-sm text-gray-600">**SEO :** Optimise la structure et le contenu pour le référencement naturel. **Rédacteur :** Rédige le contenu pour le site/l'application en respectant les consignes SEO et le ton de la marque.</p>
+                            <p class="text-sm text-gray-600"><b>SEO :</b> Optimise la structure et le contenu pour le référencement naturel. <b>Rédacteur :</b> Rédige le contenu pour le site/l'application en respectant les consignes SEO et le ton de la marque.</p>
                         </div>
-                        <div class="p-3 bg-pink-50 rounded-lg">
+                        <div class="role-card">
                             <strong class="text-pink-700">Planificateur Stratégique</strong>
                             <p class="text-sm text-gray-600">Analyse le marché, les tendances, et les comportements utilisateurs pour aligner le projet sur la vision business à long terme.</p>
                         </div>
@@ -104,15 +131,15 @@
                 <div class="mb-8 p-5 bg-white rounded-xl shadow-md border-l-4 border-blue-500">
                     <h3 class="text-2xl font-bold text-blue-600 mb-4">Phase B : Réalisation et Production (Le Code & L'Implémentation) 💻</h3>
                     <div class="space-y-3">
-                        <div class="p-3 bg-blue-50 rounded-lg">
+                        <div class="role-card">
                             <strong class="text-blue-700">Développeur Front-end</strong>
                             <p class="text-sm text-gray-600">Implémente l'interface utilisateur (HTML, CSS, JavaScript). Ce que l'utilisateur voit et manipule dans son navigateur.</p>
                         </div>
-                        <div class="p-3 bg-blue-50 rounded-lg">
+                        <div class="role-card">
                             <strong class="text-blue-700">Développeur Back-end</strong>
                             <p class="text-sm text-gray-600">Développe la logique métier, la gestion des données, l'authentification et les API. Ce qui se passe sur le serveur.</p>
                         </div>
-                        <div class="p-3 bg-blue-50 rounded-lg">
+                        <div class="role-card">
                             <strong class="text-blue-700">Motion Designer</strong>
                             <p class="text-sm text-gray-600">Crée des animations, des transitions fluides et des cinématiques pour enrichir l'expérience utilisateur et les communications.</p>
                         </div>
@@ -123,15 +150,24 @@
                 <div class="p-5 bg-white rounded-xl shadow-md border-l-4 border-purple-500">
                     <h3 class="text-2xl font-bold text-purple-600 mb-4">Phase C : Pilotage, Lancement et Vie du Produit 🚀</h3>
                     <div class="space-y-3">
-                        <div class="p-3 bg-purple-50 rounded-lg">
-                            <strong class="text-purple-700">Directeur de Projet (DP)</strong>
-                            <p class="text-sm text-gray-600">Supervise plusieurs projets ou un projet d'une grande envergure. Il gère l'allocation des ressources et a une vision stratégique de portefeuille.</p>
+
+                        <!-- Ajout du Product Owner (PO) -->
+                        <div class="role-card">
+                            <strong class="text-purple-700">Product Owner (PO) 🎯 (Nouveau Rôle Clé)</strong>
+                            <p class="text-sm text-gray-600">Représente la MOA dans l'équipe de réalisation (MOE). Il est responsable de la **vision du produit**, de la gestion du **backlog** (liste des fonctionnalités) et de la maximisation de la valeur délivrée.</p>
                         </div>
-                        <div class="p-3 bg-purple-50 rounded-lg">
-                            <strong class="text-purple-700">Chef de Projet (PM)</strong>
-                            <p class="text-sm text-gray-600">Rappel : Assure le pilotage opérationnel quotidien, gère le triptyque (Qualité, Coût, Délai) et la communication entre les équipes.</p>
+
+                        <!-- Différenciation DP vs PM -->
+                        <div class="role-card">
+                            <strong class="text-purple-700">Directeur de Projet (DP) 💼 (Stratégique)</strong>
+                            <p class="text-sm text-gray-600">Supervise la **gestion de portefeuille** (plusieurs projets). Il est responsable de l'alignement stratégique et de l'allocation des ressources au niveau de l'entreprise.</p>
                         </div>
-                        <div class="p-3 bg-purple-50 rounded-lg">
+                        <div class="role-card">
+                            <strong class="text-purple-700">Chef de Projet (PM) 📅 (Opérationnel)</strong>
+                            <p class="text-sm text-gray-600">Assure le **pilotage opérationnel** quotidien d'un seul projet. Il gère le triptyque (Qualité, Coût, Délai) et la communication entre les équipes.</p>
+                        </div>
+
+                        <div class="role-card">
                             <strong class="text-purple-700">Social Media Manager (SMM)</strong>
                             <p class="text-sm text-gray-600">Gère la stratégie de contenu et la présence sur les plateformes sociales, souvent essentiel pour le lancement et la promotion du livrable.</p>
                         </div>
@@ -164,6 +200,15 @@
                 <div class="glossary-entry bg-purple-50 border-purple-200">
                     <h3 class="text-xl font-bold text-purple-700">DA</h3>
                     <p class="text-gray-700 mt-1 text-sm">Directeur Artistique.</p>
+                </div>
+                 <!-- Ajout de PO et SMM au glossaire pour la complétude -->
+                <div class="glossary-entry bg-red-50 border-red-200">
+                    <h3 class="text-xl font-bold text-red-700">PO</h3>
+                    <p class="text-gray-700 mt-1 text-sm">Product Owner (Vision produit, gestion du Backlog).</p>
+                </div>
+                <div class="glossary-entry bg-purple-50 border-purple-200">
+                    <h3 class="text-xl font-bold text-purple-700">SMM</h3>
+                    <p class="text-gray-700 mt-1 text-sm">Social Media Manager (Stratégie de réseaux sociaux).</p>
                 </div>
             </div>
         </section>
